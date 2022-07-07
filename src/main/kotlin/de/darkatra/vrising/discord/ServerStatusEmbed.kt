@@ -50,7 +50,7 @@ object ServerStatusEmbed {
 
             rules["days-running"]?.let { currentDay ->
                 field {
-                    name = "Ingame days"
+                    name = "In-Game Days"
                     value = "$currentDay"
                     inline = true
                 }
