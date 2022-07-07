@@ -37,13 +37,13 @@ object ServerStatusEmbed {
             }
 
             field {
-                name = "Ip and Port"
+                name = "IP and Port"
                 value = "${serverInfo.hostAddress}:${serverInfo.gamePort}"
                 inline = true
             }
 
             field {
-                name = "Online count"
+                name = "Online Count"
                 value = "${serverInfo.numOfPlayers}/${serverInfo.maxPlayers}"
                 inline = true
             }
@@ -61,7 +61,7 @@ object ServerStatusEmbed {
                     .chunked(20)
                     .forEach { chunk ->
                         field {
-                            name = "Online players"
+                            name = "Online Players"
                             value = chunk.joinToString(separator = "\n") { player -> "**${player.name}**" }
                             inline = true
                         }
